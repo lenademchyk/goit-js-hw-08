@@ -42,8 +42,8 @@ getCurrentTime();
 
 player.on('timeupdate', throttle(onCurrentTime, 1000));
 
-function onCurrentTime(e) {
-  localStorage.setItem(KEEP_TIME, e.seconds);
+function onCurrentTime(evt) {
+  localStorage.setItem(KEEP_TIME, evt.seconds);
 }
 
 function getCurrentTime() {
